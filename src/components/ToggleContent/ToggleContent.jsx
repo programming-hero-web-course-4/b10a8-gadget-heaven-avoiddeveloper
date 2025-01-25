@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import AllProducts from "../AllProducts/AllProducts";
 import Phones from "../Phones/Phones";
 import Laptops from "../Laptops/Laptops";
 import Accessories from "../Accessories/Accessories";
+export const DataContext = createContext([]);
 
 const ToggleContent = () => {
     const [activeButton, setActiveButton] = useState("allProducts");
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setItems(data))
+    }, [])
+
+
+
 
     const renderContent = () => {
         if (activeButton === "allProducts") {
@@ -57,7 +69,11 @@ const ToggleContent = () => {
                     Accessories
                 </button>
             </div>
-            <div className="col-span-10">{renderContent()}</div>
+            <div className="col-span-10">
+                <DataContext.Provider value={items}>
+                    {renderContent()}
+                </DataContext.Provider>
+            </div>
         </div>
     );
 };

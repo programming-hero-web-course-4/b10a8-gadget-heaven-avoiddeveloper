@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import Item from "../Items/Item";
+import { DataContext } from "../ToggleContent/ToggleContent";
 
 const Laptops = () => {
-    const [item, setItem] = useState([]);
+    const data = useContext(DataContext)
 
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setItem(data))
-    }, []);
-
-    const laptops = item.filter((i) => i.category === "Laptops");
+    const laptops = data.filter((i) => i.category === "Laptops");
 
     return (
         <div className="col-span-10 grid grid-cols-3 gap-4">

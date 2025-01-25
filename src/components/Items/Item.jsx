@@ -1,5 +1,7 @@
-const Item = ({item}) => {
-    const{product_title, product_image, price} = item;
+import PropTypes from 'prop-types';
+
+const Item = ({ item }) => {
+    const { product_title, product_image, price } = item;
     return (
         <div className="card bg-base-100 shadow-sm">
             <figure className="px-10 pt-10">
@@ -18,5 +20,9 @@ const Item = ({item}) => {
         </div>
     );
 };
+
+Item.propTypes = {
+    item: PropTypes.object,
+}
 
 export default Item;
