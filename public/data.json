@@ -155,7 +155,7 @@
             "USB-C charging",
             "Customizable buttons"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.7,
         "brand": "Logitech"
     }

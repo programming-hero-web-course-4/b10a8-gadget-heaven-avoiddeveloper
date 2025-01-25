@@ -7,6 +7,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Statistics from './components/Statistics/Statistics';
 import Dashboard from './components/Dashboard/Dashboard';
 import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -16,15 +17,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:<Home></Home>
+        element: <Home></Home>
       },
       {
         path: "/statistics",
-        element:<Statistics></Statistics>
+        element: <Statistics></Statistics>
       },
       {
         path: "/dashboard",
-        element:<Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: "/details/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('/public/data.json')
       }
     ]
   },
