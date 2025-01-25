@@ -1,0 +1,162 @@
+[
+    {
+        "product_id": "PH101",
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.ibb.co.com/gwDzJzJ/SAMSUNG-Galaxy-S23.webp",
+        "category": "Phones",
+        "price": 849,
+        "description": "A flagship smartphone with excellent performance and design.",
+        "specifications": [
+            "6.1-inch AMOLED",
+            "Snapdragon 8 Gen 2",
+            "3900mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "PH102",
+        "product_title": "iPhone 15",
+        "product_image": "https://i.ibb.co.com/9ZBCXWG/i-Phone-15.webp",
+        "category": "Phones",
+        "price": 1099,
+        "description": "The latest iPhone with A17 Bionic chip and advanced cameras.",
+        "specifications": [
+            "6.1-inch Super Retina XDR",
+            "A17 Bionic",
+            "3279mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "PH103",
+        "product_title": "Google Pixel 8",
+        "product_image": "https://i.ibb.co.com/16gZRjd/google-pixel-8.jpg",
+        "category": "Phones",
+        "price": 699,
+        "description": "Google's latest phone with AI-powered features.",
+        "specifications": [
+            "6.2-inch OLED",
+            "Google Tensor G3",
+            "4600mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Google"
+    },
+    {
+        "product_id": "PH104",
+        "product_title": "OnePlus Nord 3",
+        "product_image": "https://i.ibb.co.com/XSVC807/Oneplus-Nord-3-5-G.jpg",
+        "category": "Phones",
+        "price": 499,
+        "description": "An affordable phone with flagship-like features.",
+        "specifications": [
+            "6.74-inch AMOLED",
+            "Dimensity 9000",
+            "5000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "OnePlus"
+    },
+    {
+        "product_id": "PH105",
+        "product_title": "Sony Xperia 10 V",
+        "product_image": "https://i.ibb.co.com/7S2VnMJ/Sony-Xperia-10-V.jpg",
+        "category": "Phones",
+        "price": 399,
+        "description": "A compact smartphone with great battery life.",
+        "specifications": [
+            "6.1-inch OLED",
+            "Snapdragon 695",
+            "5000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Sony"
+    },
+    {
+        "product_id": "PH106",
+        "product_title": "Xiaomi Redmi Note 13",
+        "product_image": "https://i.ibb.co.com/m0rDpkL/Redmi-Note-13.jpg",
+        "category": "Phones",
+        "price": 299,
+        "description": "A budget phone with impressive performance.",
+        "specifications": [
+            "6.67-inch AMOLED",
+            "Snapdragon 7 Gen 1",
+            "5000mAh battery"
+        ],
+        "availability": false,
+        "rating": 4.3,
+        "brand": "Xiaomi"
+    },
+    {
+        "product_id": "LP301",
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.ibb.co.com/Pxt1Lrk/Mac-Book-Air-M2.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "A lightweight and powerful laptop with the M2 chip.",
+        "specifications": [
+            "13.6-inch Retina",
+            "Apple M2",
+            "8GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "LP302",
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/QJS0rMQ/HP-Spectre-x360.jpg",
+        "category": "Laptops",
+        "price": 1399,
+        "description": "A versatile 2-in-1 laptop with stunning design.",
+        "specifications": [
+            "13.5-inch OLED",
+            "Intel Core i7",
+            "16GB RAM"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "HP"
+    },
+    {
+        "product_id": "AC401",
+        "product_title": "Apple AirPods Pro (2nd Gen)",
+        "product_image": "https://i.ibb.co.com/52VZShD/Apple-Air-Pods-Pro-2nd-Gen.webp",
+        "category": "Accessories",
+        "price": 249,
+        "description": "High-quality noise-cancelling earbuds.",
+        "specifications": [
+            "Active Noise Cancellation",
+            "Spatial Audio",
+            "MagSafe Charging"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "AC402",
+        "product_title": "Logitech MX Master 3S",
+        "product_image": "https://i.ibb.co.com/8xxsJ0j/Logitech-MX-Master-3-S.jpg",
+        "category": "Accessories",
+        "price": 99,
+        "description": "A premium wireless mouse for productivity.",
+        "specifications": [
+            "8000 DPI sensor",
+            "USB-C charging",
+            "Customizable buttons"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Logitech"
+    }
+]
