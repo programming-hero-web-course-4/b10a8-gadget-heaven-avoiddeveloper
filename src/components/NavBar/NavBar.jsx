@@ -1,8 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
 import { CiHeart } from "react-icons/ci";
+import { useContext } from "react";
+import { ItemContext, WishContext } from "../../App";
 
 const NavBar = () => {
+    const { cart } = useContext(ItemContext);
+    const { wish } = useContext(WishContext);
+
     const links = <>
         <li className="font-bold text-base"><NavLink to={"/"}>Home</NavLink></li>
         <li className="font-bold text-base"><NavLink to={"/statistics"}>Statistics</NavLink></li>
@@ -40,11 +45,13 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <div className="bg-white p-3 rounded-full">
+                <div className="bg-white p-3 rounded-full flex gap-1">
                     <TiShoppingCart className="text-2xl text-black" />
+                    <p className="text-[12px]">{cart.length}</p>
                 </div>
-                <div className="bg-white p-3 rounded-full">
+                <div className="bg-white p-3 rounded-full  flex gap-1">
                     <CiHeart className="text-2xl text-black" />
+                    <p className="text-[12px]">{wish.length}</p>
                 </div>
 
             </div>

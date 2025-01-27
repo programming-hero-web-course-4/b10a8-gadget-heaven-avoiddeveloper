@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
       },
       {
         path: "/details/:product_id",
@@ -35,6 +36,8 @@ const router = createBrowserRouter([
     ]
   },
 ]);
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

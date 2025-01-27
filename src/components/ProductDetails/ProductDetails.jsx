@@ -1,16 +1,17 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
 import { CiHeart } from "react-icons/ci";
+import { useContext } from "react";
+import { ItemContext, WishContext } from "../../App";
 
 const ProductDetails = () => {
     const param = useParams();
     const data = useLoaderData();
+    const { increaseCart } = useContext(ItemContext);
+    const { handleWish } = useContext(WishContext);
 
     let device = data.find((item) => item.product_id === param.product_id);
     const { product_title, product_image, price, description, specifications, availability, rating } = device;
-
-    console.log(data);
-    console.log(device);
 
     return (
         <div className="h-screen">
@@ -59,8 +60,8 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="flex items-center gap-2">
-                                <button className="btn rounded-full bg-violet-500 text-white font-bold text-[18px]">Add To Cart<TiShoppingCart /></button>
-                                <button className="btn btn-circle bg-violet-500"><CiHeart className="text-3xl text-white"></CiHeart></button>
+                                <button onClick={() => increaseCart(product_title)} className="btn rounded-full bg-violet-500 text-white font-bold text-[18px]">Add To Cart<TiShoppingCart /></button>
+                                <button onClick={() => handleWish(product_title)} className="btn btn-circle bg-violet-500"><CiHeart className="text-3xl text-white"></CiHeart></button>
                             </div>
                         </div>
                     </div>
