@@ -1,23 +1,22 @@
 import { useContext, useEffect, useState } from "react";
+import { FaSort } from "react-icons/fa";
 import { ItemContext } from "../../App";
 
-
 const Cart = () => {
-    const [items, setItems] = useState([]);
+    const [selectedItem, setSelectedItem] = useState([]);
 
     useEffect(() => {
         fetch('/public/data.json')
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setSelectedItem(data.filter(item => cart.includes(item.product_title))));
     }, []);
 
     const { cart } = useContext(ItemContext);
 
-    const selectedItem = items.filter(item =>
-        cart.includes(item.product_title)
-    );
-
-
+    const handleSort = () => {
+        const sortedItems = [...selectedItem].sort((a, b) => b.price - a.price);
+        setSelectedItem(sortedItems);
+    };
 
     return (
         <div>
@@ -27,7 +26,7 @@ const Cart = () => {
                 </div>
                 <div className="col-span-4 flex justify-end items-center">
                     <div className="flex gap-5">
-                        <button className="btn">Sort By Price</button>
+                        <button className="btn" onClick={handleSort}>Sort By Price <FaSort /></button>
                         <button className="btn">Purchase</button>
                     </div>
                 </div>
@@ -37,7 +36,7 @@ const Cart = () => {
                 {
                     selectedItem.map((i, index) => (
                         <div className="flex justify-evenly items-center space-y-3" key={index}>
-                            <img src={i.product_image} alt={i.product_title}  className="w-[280px]"/>
+                            <img src={i.product_image} alt={i.product_title} className="w-[280px]" />
                             <div>
                                 <h2 className="font-semibold text-[24px] text-[#09080F]">{i.product_title}</h2>
                                 <p className="font-normal text-[18px] text-[#09080F99]">
@@ -49,7 +48,6 @@ const Cart = () => {
                     ))
                 }
             </div>
-
         </div>
     );
 };
