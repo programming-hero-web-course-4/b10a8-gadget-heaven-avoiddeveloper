@@ -11,9 +11,10 @@ const NavBar = () => {
     const loc = useLocation();
 
     const links = <>
-        <li className="font-bold text-base"><NavLink to={"/"}>Home</NavLink></li>
+        <li className="font-bold text-base"><NavLink to={"/home"}>Home</NavLink></li>
         <li className="font-bold text-base"><NavLink to={"/statistics"}>Statistics</NavLink></li>
         <li className="font-bold text-base"><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
+        <li className="font-bold text-base"><NavLink to={"/whyUs"}>Why Us</NavLink></li>
     </>
     return (
         <nav className={`navbar rounded-t-2xl py-4 px-3 ${loc.pathname === '/' ? 'bg-[#9538E2] text-white' : 'bg-white text-black'}`}>

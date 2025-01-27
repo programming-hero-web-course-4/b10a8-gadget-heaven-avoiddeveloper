@@ -19,7 +19,7 @@ const WishList = () => {
     return (
         <div>
             <div className="py-4">
-                <p className="font-bold text-[24px] text-[#0B0B0B]">Cart</p>
+                <p className="font-bold text-[24px] text-[#0B0B0B]">Wish List</p>
             </div>
 
             <div>
@@ -30,7 +30,7 @@ const WishList = () => {
                             <div>
                                 <h2 className="font-semibold text-[24px] text-[#09080F]">{i.product_title}</h2>
                                 <p className="font-normal text-[18px] text-[#09080F99]">
-                                    Ultra-slim, high-performance laptop with 13.4-inch Infinity Edge display.
+                                    {i.description}
                                 </p>
                                 <p className="font-semibold text-[20px] text-[#09080FCC]">Price: ${i.price}</p>
                             </div>

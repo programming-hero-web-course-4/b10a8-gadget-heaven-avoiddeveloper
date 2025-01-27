@@ -24,7 +24,7 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
+    });
   }
 
   const handleWish = (title) => {
@@ -38,7 +38,7 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
+    });
   }
 
   return (
